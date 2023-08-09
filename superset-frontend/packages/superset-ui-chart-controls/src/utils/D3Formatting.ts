@@ -84,8 +84,5 @@ export const D3_TIME_FORMAT_OPTIONS: [string, string][] = [
   ['%d-%m-%Y %H:%M:%S', '%d-%m-%Y %H:%M:%S | 14-01-2019 01:32:10'],
   ['%H:%M:%S', '%H:%M:%S | 01:32:10'],
 ];
-
-
-
 export const DEFAULT_NUMBER_FORMAT = D3_FORMAT_OPTIONS[0][0];
 export const DEFAULT_TIME_FORMAT = D3_TIME_FORMAT_OPTIONS[0][0];
