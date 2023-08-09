@@ -94,7 +94,7 @@ export default function Button(props: ButtonProps) {
 
   if (buttonStyle === 'primary') {
     backgroundColor = primary.base; // btn color
-    backgroundColorHover =  primary.base;  // btn on hover
+    backgroundColorHover = primary.base; // btn on hover
     backgroundColorActive = mix(0.2, grayscale.dark2, primary.dark1);
     color = grayscale.light5;
     colorHover = color;
@@ -172,7 +172,7 @@ export default function Button(props: ButtonProps) {
         '&:hover': {
           color: colorHover,
           backgroundColor: backgroundColorHover,
-          borderColor:" #1932bc",
+          borderColor: ' #1932bc',
         },
         '&:active': {
           color,
