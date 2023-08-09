@@ -60,13 +60,13 @@ const defaultTheme = {
       help: '#737373',
     },
     primary: {
-      base: '#20A7C9',
-      dark1: '#1A85A0',
+      base: '#1932bc',
+      dark1: '#1932bc',
       dark2: '#156378',
       light1: '#79CADE',
       light2: '#A5DAE9',
       light3: '#D2EDF4',
-      light4: '#E9F6F9',
+      light4: '#d7def3',
       light5: '#F3F8FA',
     },
     secondary: {

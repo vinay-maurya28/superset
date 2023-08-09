@@ -16,8 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+// import { createD3NumberFormatter } from '@superset-ui/number-format';
 import {
   createDurationFormatter,
+  // Add createD3NumberFormatter
+  createD3NumberFormatter,
   getNumberFormatter,
   getNumberFormatterRegistry,
   NumberFormats,
@@ -25,6 +28,7 @@ import {
   smartDateFormatter,
   smartDateVerboseFormatter,
 } from '@superset-ui/core';
+
 import { FormatLocaleDefinition } from 'd3-format';
 
 export default function setupFormatters(
@@ -70,6 +74,19 @@ export default function setupFormatters(
     .registerValue(
       'DURATION_SUB',
       createDurationFormatter({ formatSubMilliseconds: true }),
+    )
+    // Add CURRENCY_INDIA
+    .registerValue(
+      'CURRENCY_INDIA',
+      createD3NumberFormatter({
+        locale: {
+          decimal: '.',
+          thousands: ',',
+          grouping: [3, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+          currency: ['₹', ''],
+        },
+        formatString: '$,.2f',
+      }),
     );
 
   getTimeFormatterRegistry()

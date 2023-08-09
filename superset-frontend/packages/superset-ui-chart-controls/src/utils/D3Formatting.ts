@@ -55,10 +55,22 @@ export const D3_FORMAT_OPTIONS: [string, string][] = [
   [NumberFormats.SMART_NUMBER, t('Adaptive formatting')],
   ['~g', t('Original value')],
   ...d3Formatted,
+  [',d', ',d (12345.432 => 12,345)'],
+  ['.1s', '.1s (12345.432 => 10k)'],
+  ['.3s', '.3s (12345.432 => 12.3k)'],
+  [',.1%', ',.1% (12345.432 => 1,234,543.2%)'],
+  ['.2%', '.2% (12345.432 => 1234543.20%)'],
+  ['.3%', '.3% (12345.432 => 1234543.200%)'],
+  ['.4r', '.4r (12345.432 => 12350)'],
+  [',.1f', ',.1f (12345.432 => 12,345.4)'],
+  [',.2f', ',.2f (12345.432 => 12,345.43)'],
+  [',.3f', ',.3f (12345.432 => 12,345.432)'],
+  ['+,', '+, (12345.432 => +12,345.432)'],
+  ['$,.2f', '$,.2f (12345.432 => $12,345.43)'],
+  ['CURRENCY_INDIA', '₹,.2f (12345.432 => ₹12,345.43)'],
   ['DURATION', t('Duration in ms (66000 => 1m 6s)')],
   ['DURATION_SUB', t('Duration in ms (1.40008 => 1ms 400µs 80ns)')],
 ];
-
 export const D3_TIME_FORMAT_DOCS = t(
   'D3 time format syntax: https://github.com/d3/d3-time-format',
 );
@@ -72,6 +84,8 @@ export const D3_TIME_FORMAT_OPTIONS: [string, string][] = [
   ['%d-%m-%Y %H:%M:%S', '%d-%m-%Y %H:%M:%S | 14-01-2019 01:32:10'],
   ['%H:%M:%S', '%H:%M:%S | 01:32:10'],
 ];
+
+
 
 export const DEFAULT_NUMBER_FORMAT = D3_FORMAT_OPTIONS[0][0];
 export const DEFAULT_TIME_FORMAT = D3_TIME_FORMAT_OPTIONS[0][0];
